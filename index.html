@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Al Shahrear Hosen Songram | Senior Video Editor</title>
+    <title>Md Al Shaharear Hosen Songram | Senior Video Editor & Digital Content Creator</title>
+    <meta name="description" content="Senior Video Editor & Digital Content Creator specializing in fast-paced news editing, visual storytelling, and high-impact digital media production in Bangladesh.">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
                     colors: {
-                        brand: {
-                            dark: '#030712',
-                            card: '#0f172a',
-                            border: '#1e293b',
+                        dark: {
+                            base: '#07090e',
+                            surface: '#0f141f',
+                            card: '#151c2c',
+                            border: '#1f293d',
+                            hover: '#26334d'
+                        },
+                        accent: {
                             cyan: '#06b6d4',
-                            gold: '#f59e0b'
+                            sky: '#38bdf8',
+                            amber: '#f59e0b'
                         }
                     }
                 }
@@ -26,412 +41,693 @@
         }
     </script>
     <style>
-        .bento-card {
-            background: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 100%);
+        body {
+            background-color: #07090e;
+            color: #e2e8f0;
+        }
+        .cinematic-glow {
+            background: radial-gradient(circle at 50% -20%, rgba(56, 189, 248, 0.12), transparent 70%);
+        }
+        .glass-card {
+            background: rgba(21, 28, 44, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .bento-card:hover {
-            border-color: rgba(6, 182, 212, 0.5);
-            box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.2);
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
         }
-        .text-gradient {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f43f5e 100%);
+        .gradient-text {
+            background: linear-gradient(135deg, #f8fafc 0%, #38bdf8 50%, #818cf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Large Name Dynamic Color Animation */
+        @keyframes nameGradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-name {
+            background: linear-gradient(270deg, #38bdf8, #818cf8, #c084fc, #f43f5e, #38bdf8);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: nameGradientShift 8s ease infinite;
+        }
+
+        /* Smooth motion text animation */
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+        }
+        .motion-subtext {
+            display: inline-block;
+            animation: subtleFloat 3.5s ease-in-out infinite;
+        }
     </style>
 </head>
-<body class="bg-[#030712] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+<body class="font-sans antialiased selection:bg-sky-500 selection:text-black">
 
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#030712]/90 backdrop-blur-xl border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-base md:text-lg font-black tracking-wider text-white hover:text-cyan-400 transition">
-                ALSHAHREAR HOSEN <span class="text-cyan-400">SONGRAM</span>
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#07090e]/90 backdrop-blur-md border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Updated Header Logo to Full Name -->
+            <a href="#home" class="text-base sm:text-lg font-extrabold tracking-tight text-white hover:text-accent-sky transition">
+                Md Al Shaharear Hosen Songram
             </a>
+
             <nav class="hidden md:flex space-x-8 font-semibold text-sm text-slate-300">
-                <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-                <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
-                <a href="#social" class="hover:text-cyan-400 transition">Community</a>
-                <a href="#training" class="hover:text-cyan-400 transition">Training & Education</a>
-                <a href="#portfolio" class="hover:text-cyan-400 transition">Portfolio</a>
+                <a href="#home" class="hover:text-accent-sky transition">Home</a>
+                <a href="#about" class="hover:text-accent-sky transition">About</a>
+                <a href="#services" class="hover:text-accent-sky transition">What I Do</a>
+                <a href="#experience" class="hover:text-accent-sky transition">Experience</a>
+                <a href="#work" class="hover:text-accent-sky transition">Work</a>
+                <a href="#skills" class="hover:text-accent-sky transition">Skills</a>
+                <a href="#contact" class="hover:text-accent-sky transition">Contact</a>
             </nav>
-            <a href="https://wa.me/88018202888809" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-5 py-2 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-cyan-500/20">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Contact
-            </a>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/88018202888809" target="_blank" class="bg-slate-900 border border-dark-border hover:border-accent-sky text-white px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Let's Talk
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-surface border-b border-dark-border px-6 py-6 space-y-4">
+            <a href="#home" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">About</a>
+            <a href="#services" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">What I Do</a>
+            <a href="#experience" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">Experience</a>
+            <a href="#work" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">Work</a>
+            <a href="#skills" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">Skills</a>
+            <a href="#contact" class="block text-slate-300 hover:text-accent-sky font-semibold text-sm">Contact</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen pt-28 pb-12 px-6 flex items-center max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-8 items-center w-full">
-            
-            <!-- Bio Column -->
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-bold">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    <span>Senior Video Editor & Content Creator</span>
-                </div>
+    <main class="cinematic-glow pt-20">
 
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                    <span>Md. Al Shahrear Hosen</span> <br>
-                    <span class="text-gradient">(Songram)</span>
-                </h1>
-
-                <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl">
-                    Working successfully as a Video Editor for over 3+ years in Bangladesh's leading online news portals (Banglanews24, Bangladesh Times). Specialized in fast-paced news editing, visual storytelling, investigative packaging, and brand content creation.
-                </p>
-
-                <!-- Social Media Links Block -->
-                <div class="flex flex-wrap items-center gap-3 pt-1">
-                    <span class="text-xs text-slate-400 font-semibold mr-2">Connect:</span>
-                    <a href="https://www.facebook.com/mdalshaharearhosensongram" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500 hover:text-cyan-400 flex items-center justify-center text-slate-300 transition shadow-sm" title="Facebook Profile">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.facebook.com/AlShahrearSongram" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500 hover:text-blue-400 flex items-center justify-center text-slate-300 transition shadow-sm" title="Facebook Page">
-                        <i class="fa-solid fa-flag"></i>
-                    </a>
-                    <a href="mailto:mdallshahriyarsomrat@gmail.com" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500 hover:text-amber-400 flex items-center justify-center text-slate-300 transition shadow-sm" title="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/88018202888809" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-slate-300 transition shadow-sm" title="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-
-                <!-- Key Quick Stats Bento Row -->
-                <div class="grid grid-cols-3 gap-4 pt-2">
-                    <div class="bento-card p-4 rounded-2xl border text-center">
-                        <h3 class="text-2xl md:text-3xl font-black text-cyan-400">3+</h3>
-                        <p class="text-xs text-slate-400 mt-1">Years Experience</p>
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-[88vh] flex items-center px-6 max-w-7xl mx-auto py-12">
+            <div class="grid lg:grid-cols-12 gap-12 items-center w-full">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-bold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-accent-sky animate-ping"></span>
+                        <span>NEWS & DIGITAL MEDIA PROFESSIONAL</span>
                     </div>
-                    <div class="bento-card p-4 rounded-2xl border text-center">
-                        <h3 class="text-2xl md:text-3xl font-black text-amber-400">2+</h3>
-                        <p class="text-xs text-slate-400 mt-1">National Media Outlets</p>
-                    </div>
-                    <div class="bento-card p-4 rounded-2xl border text-center">
-                        <h3 class="text-2xl md:text-3xl font-black text-purple-400">1000+</h3>
-                        <p class="text-xs text-slate-400 mt-1">Edited Contents</p>
-                    </div>
-                </div>
 
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#portfolio" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-6 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
-                        Watch Portfolio <i class="fa-solid fa-arrow-down text-xs"></i>
-                    </a>
-                    <a href="https://wa.me/88018202888809" target="_blank" class="bg-slate-900 border border-slate-700 hover:bg-slate-800 text-white px-6 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Direct WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Hero Main Profile Picture -->
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="bento-card p-4 rounded-3xl w-full max-w-md relative group">
-                    <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-950 border border-slate-800">
-                        <img id="hero-img" src="assets/hero_portrait.jpg" alt="Md. Al Shahrear Hosen Songram" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="absolute bottom-8 left-8 right-8 bg-slate-900/90 backdrop-blur-md p-4 rounded-2xl border border-slate-700">
-                        <p class="text-[10px] text-cyan-400 font-bold uppercase tracking-wider">PROFILE</p>
-                        <h3 class="text-base font-bold text-white">Md. Al Shahrear Hosen (Songram)</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Video Editor | Newsroom Specialist</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="experience" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
-        <div class="mb-10">
-            <span class="text-cyan-400 font-bold text-xs tracking-widest uppercase">JOURNEY</span>
-            <h2 class="text-3xl font-bold text-white mt-1">Work Experience & Media Career</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Banglanews24 Experience -->
-            <div class="bento-card p-6 rounded-3xl border flex flex-col justify-between space-y-6">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold rounded-lg">Current Workplace</span>
-                        <span class="text-xs text-slate-400">Video Editor</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Banglanews24</h3>
-                    <p class="text-slate-300 text-sm mt-2 leading-relaxed">
-                        Editing national & international critical news videos, newsroom visual storytelling, and creating optimized video content for digital platforms.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-3 pt-2">
-                    <div class="rounded-xl overflow-hidden aspect-video bg-slate-950 border border-slate-800 group">
-                        <img src="assets/banglanews_desk.jpg" alt="Banglanews24 Workstation" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-                    </div>
-                    <div class="rounded-xl overflow-hidden aspect-video bg-slate-950 border border-slate-800 group">
-                        <img src="assets/banglanews_17th_birthday.jpg" alt="Banglanews24 17th Celebration" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-400 flex items-center gap-2">
-                    <i class="fa-solid fa-building text-cyan-400"></i> Leading Online News Portal | Newsroom Workstation & 17th Anniversary Celebration
-                </div>
-            </div>
-
-            <!-- Bangladesh Times Experience -->
-            <div class="bento-card p-6 rounded-3xl border flex flex-col justify-between space-y-6">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold rounded-lg">Previous Experience</span>
-                        <span class="text-xs text-slate-400">Video Editor</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Bangladesh Times</h3>
-                    <p class="text-slate-300 text-sm mt-2 leading-relaxed">
-                        Timeline editing in a mobile-first newsroom workflow, editing news explainers, and investigative video packages.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-3 pt-2">
-                    <div class="rounded-xl overflow-hidden aspect-video bg-slate-950 border border-slate-800 group">
-                        <img src="assets/bangladesh_times_lounge.jpg" alt="Bangladesh Times Lounge" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-                    </div>
-                    <div class="rounded-xl overflow-hidden aspect-video bg-slate-950 border border-slate-800 group">
-                        <img src="assets/bangladesh_times_editing.jpg" alt="Bangladesh Times Suite" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-400 flex items-center gap-2">
-                    <i class="fa-solid fa-newspaper text-cyan-400"></i> Digital News Station | Newsroom Lounge & Timeline Editing Suite
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Work Section -->
-    <section id="social" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
-        <div class="mb-10">
-            <span class="text-cyan-400 font-bold text-xs tracking-widest uppercase">COMMUNITY WORK</span>
-            <h2 class="text-3xl font-bold text-white mt-1">Social Organization & Achievements</h2>
-        </div>
-
-        <div class="grid md:grid-cols-12 gap-8">
-            <div class="bento-card p-6 rounded-3xl border md:col-span-7 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg font-bold">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
+                    <!-- Big Name Header with Dynamic Animated Color -->
+                    <div class="space-y-2">
+                        <h1 class="text-4xl sm:text-6xl lg:text-6xl font-black leading-tight tracking-tight animated-name">
+                            Md Al Shaharear Hosen Songram
+                        </h1>
+                        <!-- Motion Subtitle -->
                         <div>
-                            <h3 class="text-xl font-bold text-white">Naboprottoy Youth Organization</h3>
-                            <p class="text-xs text-cyan-400">Governing Body Member | Former Media & Publicity Secretary (2 Years)</p>
+                            <span class="motion-subtext text-lg sm:text-2xl font-bold gradient-text tracking-wide">
+                                Senior Video Editor & Digital Content Creator
+                            </span>
                         </div>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Along with active involvement in social work, served for 2 consecutive years as the Secretary of Media, Outdoor Videography, Press, and Publications for the organization.
+
+                    <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-xl">
+                        Turning news, ideas and stories into engaging visual content.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#work" class="bg-accent-sky hover:bg-sky-400 text-slate-950 px-7 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-sky-500/20">
+                            View My Work <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        <a href="#contact" class="bg-dark-card border border-dark-border hover:border-slate-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                            Download CV <i class="fa-solid fa-download text-xs text-slate-400"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Social Connection -->
+                    <div class="pt-6 flex items-center gap-4 text-xs text-slate-400">
+                        <span>Direct Contact:</span>
+                        <a href="https://www.facebook.com/mdalshaharearhosensongram" target="_blank" class="hover:text-accent-sky transition"><i class="fa-brands fa-facebook text-base"></i> Profile</a>
+                        <a href="https://www.facebook.com/AlShahrearSongram" target="_blank" class="hover:text-accent-sky transition"><i class="fa-solid fa-flag text-base"></i> Page</a>
+                        <a href="mailto:mdallshahriyarsomrat@gmail.com" class="hover:text-accent-sky transition"><i class="fa-solid fa-envelope text-base"></i> Email</a>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Card (Preserved Path: assets/hero_portrait.jpg) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="glass-card p-4 rounded-3xl w-full max-w-md relative">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-dark-surface border border-dark-border">
+                            <img src="assets/hero_portrait.jpg" alt="Md Al Shaharear Hosen Songram" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent"></div>
+                        </div>
+                        <div class="mt-4 px-2 pb-2">
+                            <h3 class="text-lg font-bold text-white">Md Al Shaharear Hosen Songram</h3>
+                            <p class="text-xs text-slate-400">Senior Video Editor | Banglanews24</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="border-y border-dark-border bg-dark-surface/50 py-10">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-accent-sky">3+ Years</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-medium">Experience</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-amber-400">1000+</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-medium">Videos Edited</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-purple-400">4</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-medium">Media Organizations</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-emerald-400">Digital Media</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-medium">Specialization</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">BACKGROUND</span>
+                    <h2 class="text-3xl font-bold text-white mt-1 mb-6">News & Digital Media Professional</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        I am a dedicated Senior Video Editor and Newsroom Specialist with over 3 years of hands-on experience across leading Bangladesh national news outlets. My core expertise lies in transforming rapid news flows, complex stories, and investigative reports into visually compelling, highly retention-focused video content for digital platforms.
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Operating under tight newsroom deadlines, I combine precision timeline editing, sound design, visual packaging, and news ethics to produce content that resonates with millions of online viewers.
                     </p>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-slate-950 border border-slate-800 group mb-4">
-                    <img src="assets/naboprottoy_outdoor_shoot.jpg" alt="Outdoor Camera Work" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                <div class="lg:col-span-7">
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block mb-4">Core Operational Strengths</span>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-film text-accent-sky text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">Video Editing</h4>
+                            <p class="text-xs text-slate-400 mt-1">High-quality pacing, seamless transitions, and professional color grading.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-newspaper text-amber-400 text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">News Editing</h4>
+                            <p class="text-xs text-slate-400 mt-1">Fast-paced, accurate newsroom packaging and urgent story assembly.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-layer-group text-purple-400 text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">Visual Storytelling</h4>
+                            <p class="text-xs text-slate-400 mt-1">Crafting compelling narratives using archive footage, audio, and graphics.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-share-nodes text-emerald-400 text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">Social Media Content</h4>
+                            <p class="text-xs text-slate-400 mt-1">Optimized video formats for YouTube, Facebook, Reels, and Shorts.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-bolt text-rose-400 text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">Fast-paced Production</h4>
+                            <p class="text-xs text-slate-400 mt-1">Efficient turnarounds for breaking news and instant digital distribution.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl">
+                            <i class="fa-solid fa-clock text-cyan-400 text-xl mb-2"></i>
+                            <h4 class="text-base font-bold text-white">Deadline-focused Workflow</h4>
+                            <p class="text-xs text-slate-400 mt-1">Consistent execution under strict media production schedules.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bento-card p-6 rounded-3xl border md:col-span-5 flex flex-col justify-between">
+        <!-- WHAT I DO SECTION -->
+        <section id="services" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="text-center mb-12">
+                <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">EXPERTISE</span>
+                <h2 class="text-3xl font-bold text-white mt-1">What I Do</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-accent-sky flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Video Editing</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        News, digital media and social content editing with clean visual flow and audience engagement focus.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">News Production</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Fast-paced news video editing, urgent breaking news assembly, and structured broadcast storytelling.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Visual Storytelling</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Synthesizing footage, graphics, audio sync, and precise pacing to create deeply engaging stories.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Social Media Content</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Tailored content strategies for Facebook, YouTube, Shorts, Reels, and mobile-first platforms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER / EXPERIENCE TIMELINE WITH PRESERVED WORKPLACE PHOTOS -->
+        <section id="experience" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="mb-12">
+                <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">CAREER PATHWAY</span>
+                <h2 class="text-3xl font-bold text-white mt-1">Work Experience & On-Site Gallery</h2>
+            </div>
+
+            <div class="relative border-l-2 border-dark-border ml-4 md:ml-32 space-y-12">
+
+                <!-- 1. Banglanews24 (Preserved Paths: assets/banglanews_desk.jpg, assets/banglanews_17th_birthday.jpg) -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-accent-sky border-4 border-dark-base group-hover:scale-125 transition"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-accent-sky mb-1 md:mb-0">
+                        1 July 2025 – Present
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex justify-between items-center flex-wrap gap-2">
+                            <h3 class="text-xl font-bold text-white">Banglanews24</h3>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-bold rounded-lg">Current Workplace</span>
+                        </div>
+                        <p class="text-sm font-semibold text-slate-300">Video Editor</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Handling national news editing, breaking news rapid packages, video explainers, and digital media publication workflows for one of Bangladesh's premier news portals.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/banglanews_desk.jpg" alt="Banglanews24 Workstation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/banglanews_17th_birthday.jpg" alt="Banglanews24 17th Celebration" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. BANGLADESH TIMES (Preserved Paths: assets/bangladesh_times_lounge.jpg, assets/bangladesh_times_editing.jpg) -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark-base group-hover:bg-accent-sky transition"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-slate-400 mb-1 md:mb-0">
+                        1 Nov 2024 – 30 Jun 2025
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <h3 class="text-xl font-bold text-white">BANGLADESH TIMES</h3>
+                        <p class="text-sm font-semibold text-slate-300">Video Editor / Shift In-Charge</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Managed shift video desk workflows, news editing teams, story layout structuring, and fast-track investigative video output.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/bangladesh_times_lounge.jpg" alt="Bangladesh Times Lounge" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/bangladesh_times_editing.jpg" alt="Bangladesh Times Suite" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Projonmonews24.com -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark-base group-hover:bg-accent-sky transition"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-slate-400 mb-1 md:mb-0">
+                        1 Jan 2024 – 30 Oct 2024
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl space-y-2">
+                        <h3 class="text-xl font-bold text-white">Projonmonews24.com</h3>
+                        <p class="text-sm font-semibold text-slate-300">Video Editor</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Edited daily online news segments, feature videos, interviews, and social media reels tailored for youth audiences.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Noboprothoi (Preserved Paths: assets/naboprottoy_outdoor_shoot.jpg, assets/naboprottoy_award_2022.jpg) -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark-base group-hover:bg-accent-sky transition"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-bold text-slate-400 mb-1 md:mb-0">
+                        1 Mar 2023 – 30 Dec 2023
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <h3 class="text-xl font-bold text-white">Noboprothoi Youth Organization</h3>
+                        <p class="text-sm font-semibold text-slate-300">Video Editor & Media Secretary</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Outdoor video production, community documentary packaging, and digital media publicity campaign management.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/naboprottoy_outdoor_shoot.jpg" alt="Outdoor Camera Work" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                            <div class="rounded-xl overflow-hidden aspect-video bg-dark-base border border-dark-border group">
+                                <img src="assets/naboprottoy_award_2022.jpg" alt="Award Receiving Crest" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURED WORK / PORTFOLIO -->
+        <section id="work" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">
-                        <i class="fa-solid fa-trophy"></i>
-                    </div>
-                    <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">ANNIVERSARY CELEBRATION 2022</span>
-                    <h3 class="text-xl font-bold text-white mt-1">Best Member Award Crest</h3>
-                    <p class="text-slate-400 text-xs mt-2 mb-4">
-                        Received the Special Recognition Crest as the Best Executive Member at the 2022 Anniversary Event of Naboprottoy Jagrata Bangladesh.
-                    </p>
+                    <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">PROVEN PROJECTS</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">Featured Video Portfolio</h2>
+                    <p class="text-xs text-slate-400 mt-1">Curated collection of news explainers, investigative reporting, and special packages.</p>
                 </div>
-
-                <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-950 border border-slate-800 group mb-4">
-                    <img src="assets/naboprottoy_award_2022.jpg" alt="Award Receiving Crest" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Training & Education Section -->
-    <section id="training" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
-        <div class="mb-10">
-            <span class="text-cyan-400 font-bold text-xs tracking-widest uppercase">VOCATIONAL & ACADEMIC</span>
-            <h2 class="text-3xl font-bold text-white mt-1">Technical Training & Education</h2>
-        </div>
-
-        <div class="grid md:grid-cols-12 gap-8">
-            <div class="bento-card p-6 rounded-3xl border md:col-span-6 flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-bold mb-4">
-                        <i class="fa-solid fa-wrench"></i>
-                    </div>
-                    <span class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Vocational Training (Dec 2022)</span>
-                    <h3 class="text-xl font-bold text-white mt-1">Mobile Servicing (2-Month Trade Course)</h3>
-                    <p class="text-slate-400 text-xs mt-2 mb-4">
-                        Employability Skills Training Program (SCMFP, Component-3)<br>
-                        Implemented by: Social Development Foundation (SDF), Department of Fisheries (DoF) & BGS (Ukhiya, Cox's Bazar).
-                    </p>
-                </div>
-
-                <div class="rounded-2xl overflow-hidden aspect-[16/10] bg-slate-950 border border-slate-800 group mb-4">
-                    <img src="assets/mobile_servicing_certificate.jpg" alt="Mobile Servicing Training Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                    <span class="px-3.5 py-1.5 rounded-xl bg-accent-sky text-slate-950 font-bold">All</span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">News Editing</span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Explainer</span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Investigative</span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Sports</span>
                 </div>
             </div>
 
-            <div class="md:col-span-6 space-y-6 flex flex-col justify-between">
-                <div class="bento-card p-6 rounded-3xl border">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg font-bold mb-4">
-                        <i class="fa-solid fa-laptop-code"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Video 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/6WQ_YaNL144" title="BNP Honoring Mirza Fakhrul" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">News Explainer</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">BNP Honoring Mirza Fakhrul: Political Analysis</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Comprehensive news explainer packaging political developments with crisp archival footage and sync sound.</p>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-white">Digital Journalism & AI Literacy</h3>
-                    <p class="text-slate-400 text-xs mt-2">
-                        Prothom Alo & Google News Initiative (GNI)<br>
-                        Training on Digital Journalism, Source Verification, Fact-Checking, and Ethics of AI in Newsrooms.
-                    </p>
                 </div>
 
-                <div class="bento-card p-6 rounded-3xl border">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold mb-4">
+                <!-- Video 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/4l6WfXE_FnA" title="Thalapathy Vijay Political Strategy" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Explainer</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Thalapathy Vijay Political Entry Breakdown</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Fast-paced international feature breakdown combining dynamic text graphics and visual timing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/OS3aId1949Q" title="Investigative Package" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Investigative</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Special Investigative Reporting Package</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">In-depth investigative report featuring high-tension audio design and sharp visual narrative sequence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y4Q27GIVsVc" title="World Cup Final Match" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Sports</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">The Final World Cup Match: A Living Legend</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">High-energy sports documentary edit focused on emotional storytelling and fast match cuts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UcjIBsS1CNY" title="Heritage Mosque Special Report" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Documentary / Special</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Heritage Mosque Special Feature Report</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Cultural documentary report featuring cinematic framing and balanced voiceover mix.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video bg-black relative">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dld6QP6TDgc" title="Political Landscape 2024" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-bold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Short-form Video</span>
+                                <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Political Landscape of Bangladesh 2024</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Digital-first short news package designed specifically for social media engagement and high retention.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="mb-12">
+                <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">TECHNICAL & CREATIVE</span>
+                <h2 class="text-3xl font-bold text-white mt-1">Skills & Technical Competencies</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">Video Editing</h4>
+                        <span class="text-xs text-accent-sky font-bold">Expert</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Timeline editing, multi-cam sync, pacing & seamless cut transitions.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">News Editing</h4>
+                        <span class="text-xs text-accent-sky font-bold">Expert</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Rapid news packaging, archivity sourcing & editorial compliance.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">Storytelling</h4>
+                        <span class="text-xs text-accent-sky font-bold">Advanced</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Narrative arc, audio layering, B-roll integration & emotional hook.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">Social Media Content</h4>
+                        <span class="text-xs text-accent-sky font-bold">Expert</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Vertical 9:16 Shorts/Reels, retention optimization & platform framing.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">Motion Graphics</h4>
+                        <span class="text-xs text-slate-300 font-bold">Intermediate</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Lower thirds, title cards, animated headlines & graphic overlays.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-base font-bold text-white">Thumbnail / Visual Design</h4>
+                        <span class="text-xs text-slate-300 font-bold">Advanced</span>
+                    </div>
+                    <p class="text-xs text-slate-400">High CTR news thumbnails, banner graphics & promotional layouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & TRAINING (Preserved Path: assets/mobile_servicing_certificate.jpg) -->
+        <section class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="mb-12">
+                <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">QUALIFICATIONS</span>
+                <h2 class="text-3xl font-bold text-white mt-1">Education & Professional Training</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-accent-sky flex items-center justify-center font-bold">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white">Dhaka College</h3>
-                    <p class="text-slate-400 text-xs mt-2">
-                        Department of Islamic History & Culture<br>
-                        Completed Higher Academic Studies.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO PORTFOLIO SECTION -->
-    <section id="portfolio" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
-        <div class="text-center mb-10">
-            <span class="text-cyan-400 font-bold text-xs tracking-widest uppercase">WORKS SHOWCASE</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mt-1">Edited Video Portfolio Gallery</h2>
-            <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">Categorized video collection featuring News Explainers, Investigative Reporting, Sports, and Special Packages.</p>
-        </div>
-
-        <!-- Category Badge Overview -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10">
-            <span class="px-4 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-semibold"><i class="fa-solid fa-film text-cyan-400 mr-1"></i> All Projects</span>
-            <span class="px-4 py-1.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold"><i class="fa-solid fa-lightbulb text-amber-400 mr-1"></i> Explainer</span>
-            <span class="px-4 py-1.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold"><i class="fa-solid fa-magnifying-glass text-purple-400 mr-1"></i> Investigative</span>
-            <span class="px-4 py-1.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold"><i class="fa-solid fa-trophy text-emerald-400 mr-1"></i> Sports</span>
-            <span class="px-4 py-1.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold"><i class="fa-solid fa-newspaper text-rose-400 mr-1"></i> Political</span>
-        </div>
-
-        <!-- Video Cards Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- Video 1 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/6WQ_YaNL144" title="Video 1" allowfullscreen></iframe>
+                    <div>
+                        <span class="text-[11px] font-bold text-accent-sky">ACADEMIC DEGREE (2023 – 2024)</span>
+                        <h3 class="text-xl font-bold text-white mt-0.5">Department of Islamic History and Culture</h3>
+                        <p class="text-sm text-slate-300">Dhaka College</p>
+                        <p class="text-xs text-slate-400 mt-2">Higher academic studies fostering historical research, context analysis, and cultural perspective in journalism.</p>
                     </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">EXPLAINER</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-purple-400">JOURNALISM & VOCATIONAL TRAINING</span>
+                        <h3 class="text-lg font-bold text-white mt-0.5">Digital Journalism & AI Literacy</h3>
+                        <p class="text-xs text-slate-300">Prothom Alo & Google News Initiative (GNI)</p>
+                        <hr class="border-dark-border my-3">
+                        <h3 class="text-lg font-bold text-white">Mobile Servicing (2-Month Trade Course)</h3>
+                        <p class="text-xs text-slate-300 mb-3">Employability Skills Program (SDF / DoF / BGS - Dec 2022)</p>
+                        
+                        <div class="rounded-xl overflow-hidden bg-dark-base border border-dark-border aspect-[16/10] group">
+                            <img src="assets/mobile_servicing_certificate.jpg" alt="Mobile Servicing Training Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">BNP Honoring Mirza Fakhrul: News Analysis</h4>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Video 2 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/4l6WfXE_FnA" title="Video 2" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">EXPLAINER</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+        <!-- WHY WORK WITH ME -->
+        <section class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
+            <div class="glass-card p-8 md:p-12 rounded-3xl">
+                <div class="max-w-3xl">
+                    <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">VALUE PROPOSITION</span>
+                    <h2 class="text-3xl font-bold text-white mt-1 mb-6">Why Work With Me</h2>
+
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs text-slate-300">
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span><strong>3+ years</strong> of practical media experience</span>
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">Thalapathy Vijay Following Political Strategies</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/OS3aId1949Q" title="Video 3" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">INVESTIGATIVE PACKAGE</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span><strong>News-media workflow</strong> experience</span>
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">Special Investigative Reporting Package</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video 4 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y4Q27GIVsVc" title="Video 4" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">SPORTS EXPLAINER</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span><strong>Fast turnaround</strong> under pressure</span>
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">The Final World Cup Match: A Living Legend</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video 5 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/UcjIBsS1CNY" title="Video 5" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">SPECIAL PACKAGE</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span><strong>Strong visual storytelling</strong> techniques</span>
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">Heritage Mosque Special Feature Report</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video 6 -->
-            <div class="bento-card rounded-2xl overflow-hidden border flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-video bg-black relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dld6QP6TDgc" title="Video 6" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] font-bold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">POLITICAL EXPLAINER</span>
-                            <span class="text-[11px] text-slate-500"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span><strong>Deadline focused</strong> execution</span>
                         </div>
-                        <h4 class="text-base font-bold text-white mt-1 group-hover:text-cyan-400 transition">Political Landscape of Bangladesh 2024</h4>
+                        <div class="flex items-center gap-3 bg-dark-surface/60 p-3.5 rounded-xl border border-dark-border">
+                            <i class="fa-solid fa-check text-accent-sky text-sm"></i>
+                            <span>Experience producing <strong>high-volume digital content</strong></span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border text-center">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">GET IN TOUCH</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white">Let's Create Something Great Together</h2>
+                <p class="text-slate-400 text-sm md:text-base">Have a project, story or opportunity? Let's talk.</p>
+
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <a href="https://wa.me/88018202888809" target="_blank" class="bg-accent-sky hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-sky-500/20">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Let's Talk
+                    </a>
+                    <a href="#" class="bg-dark-card border border-dark-border hover:border-slate-600 text-white px-8 py-4 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                        <i class="fa-solid fa-file-arrow-down text-lg text-slate-400"></i> Download CV
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4 pt-10 text-left">
+                    <a href="mailto:mdallshahriyarsomrat@gmail.com" class="glass-card p-4 rounded-2xl hover:border-amber-500/40 transition block">
+                        <i class="fa-solid fa-envelope text-amber-400 text-lg mb-2"></i>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Email Direct</p>
+                        <p class="text-xs font-semibold text-white truncate">mdallshahriyarsomrat@gmail.com</p>
+                    </a>
+                    <a href="https://wa.me/88018202888809" target="_blank" class="glass-card p-4 rounded-2xl hover:border-emerald-500/40 transition block">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-lg mb-2"></i>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">WhatsApp / Phone</p>
+                        <p class="text-xs font-semibold text-white">+880 1820 288809</p>
+                    </a>
+                    <a href="https://www.facebook.com/mdalshaharearhosensongram" target="_blank" class="glass-card p-4 rounded-2xl hover:border-sky-500/40 transition block">
+                        <i class="fa-brands fa-facebook text-sky-400 text-lg mb-2"></i>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Facebook Profile</p>
+                        <p class="text-xs font-semibold text-white">Al Shahrear Hosen Songram</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-slate-900 text-center text-xs text-slate-400">
-        <p class="mb-2 text-slate-200 font-bold">Md. Al Shahrear Hosen (Songram) | Senior Video Editor</p>
-        <p>© 2026 ALSHAHREAR HOSEN SONGRAM. All rights reserved.</p>
+    <footer class="py-8 border-t border-dark-border text-center text-xs text-slate-500 bg-dark-base">
+        <p class="font-bold text-slate-400 mb-1">Md Al Shaharear Hosen Songram</p>
+        <p>© 2026 Senior Video Editor & Digital Content Creator. All rights reserved.</p>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
