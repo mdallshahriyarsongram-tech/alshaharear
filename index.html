@@ -158,13 +158,10 @@
                         Turning news, ideas and stories into engaging visual content.
                     </p>
 
-                    <!-- CTAs -->
+                    <!-- CTAs (CV Download button removed from here) -->
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="#work" class="bg-accent-sky hover:bg-sky-400 text-slate-950 px-7 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-sky-500/20">
                             View My Work <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
-                        <a href="#contact" class="bg-dark-card border border-dark-border hover:border-slate-600 text-white px-7 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
-                            Download CV <i class="fa-solid fa-download text-xs text-slate-400"></i>
                         </a>
                     </div>
 
@@ -417,7 +414,7 @@
             </div>
         </section>
 
-        <!-- FEATURED WORK / PORTFOLIO -->
+        <!-- FEATURED WORK / PORTFOLIO WITH UPDATED CATEGORY FILTER & BANGLA TITLES -->
         <section id="work" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
@@ -425,115 +422,119 @@
                     <h2 class="text-3xl font-bold text-white mt-1">Featured Video Portfolio</h2>
                     <p class="text-xs text-slate-400 mt-1">Curated collection of news explainers, investigative reporting, and special packages.</p>
                 </div>
+                
+                <!-- Updated Interactive Category Navigation Filter Tabs -->
                 <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                    <span class="px-3.5 py-1.5 rounded-xl bg-accent-sky text-slate-950 font-bold">All</span>
-                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">News Editing</span>
-                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Explainer</span>
-                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Investigative</span>
-                    <span class="px-3.5 py-1.5 rounded-xl bg-dark-card border border-dark-border text-slate-300">Sports</span>
+                    <button onclick="filterPortfolio('all')" class="filter-btn active px-4 py-2 rounded-xl bg-accent-sky text-slate-950 font-bold transition">All</button>
+                    <button onclick="filterPortfolio('news')" class="filter-btn px-4 py-2 rounded-xl bg-dark-card border border-dark-border text-slate-300 hover:text-white transition">News Editing</button>
+                    <button onclick="filterPortfolio('explainer')" class="filter-btn px-4 py-2 rounded-xl bg-dark-card border border-dark-border text-slate-300 hover:text-white transition">Explainer</button>
+                    <button onclick="filterPortfolio('investigative')" class="filter-btn px-4 py-2 rounded-xl bg-dark-card border border-dark-border text-slate-300 hover:text-white transition">Investigative</button>
+                    <button onclick="filterPortfolio('sports')" class="filter-btn px-4 py-2 rounded-xl bg-dark-card border border-dark-border text-slate-300 hover:text-white transition">Sports</button>
+                    <button onclick="filterPortfolio('entertainment')" class="filter-btn px-4 py-2 rounded-xl bg-dark-card border border-dark-border text-slate-300 hover:text-white transition">Entertainment</button>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Video Grid -->
+            <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Video 1 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 1 (News / Explainer) -->
+                <div class="portfolio-item news explainer glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/6WQ_YaNL144" title="BNP Honoring Mirza Fakhrul" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/6WQ_YaNL144" title="বিএনপি মির্জা ফখরুলকে সম্মান জানাচ্ছে" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
                                 <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">News Explainer</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">BNP Honoring Mirza Fakhrul: Political Analysis</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Comprehensive news explainer packaging political developments with crisp archival footage and sync sound.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">বিএনপি কি মির্জা ফখরুলকে যথাযথ সম্মান দিচ্ছে?</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">রাজনৈতিক বিশ্লেষণ ও ফুটেজ সমন্বয়ে প্রস্তুত করা বিশেষ নিউজ প্যাকেজ।</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 2 (Explainer / Entertainment) -->
+                <div class="portfolio-item explainer entertainment glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/4l6WfXE_FnA" title="Thalapathy Vijay Political Strategy" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/4l6WfXE_FnA" title="দলপতি বিজয় রাজনীতিতে কেন?" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
-                                <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Explainer</span>
+                                <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Explainer / Feature</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Thalapathy Vijay Political Entry Breakdown</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Fast-paced international feature breakdown combining dynamic text graphics and visual timing.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">থালাপতি বিজয়ের রাজনীতিতে আসার মূল কারণ ও কৌশল</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">আন্তর্জাতিক বিনোদন ও রাজনীতির মেলবন্ধনে নির্মিত আকর্ষণীয় ভিডিও ফিচার।</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 3 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 3 (Investigative / News) -->
+                <div class="portfolio-item investigative news glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/OS3aId1949Q" title="Investigative Package" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/OS3aId1949Q" title="অনুসন্ধানী প্রতিবেদন" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
                                 <span class="text-[10px] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Investigative</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Special Investigative Reporting Package</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">In-depth investigative report featuring high-tension audio design and sharp visual narrative sequence.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">বিশেষ অনুসন্ধানী রিপোর্ট: পর্দার পেছনের সত্য</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">সুনির্দিষ্ট তথ্য-প্রমাণ ও সাউন্ড ডিজাইনিংয়ের সমন্বয়ে তৈরি অনুসন্ধানী রিপোর্ট।</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 4 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 4 (Sports) -->
+                <div class="portfolio-item sports glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y4Q27GIVsVc" title="World Cup Final Match" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y4Q27GIVsVc" title="বিশ্বকাপ ফাইনাল ম্যাচ" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
                                 <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Sports</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">The Final World Cup Match: A Living Legend</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">High-energy sports documentary edit focused on emotional storytelling and fast match cuts.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">বিশ্বকাপ ফাইনালের রোমাঞ্চকর লড়াই ও কিংবদন্তির গল্প</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">দ্রুতগতির কাট ও নিখুঁত মিউজিক সিঙ্ক সহ হাই-এনার্জি স্পোর্টস এডিট।</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 5 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 5 (News / Explainer) -->
+                <div class="portfolio-item news explainer glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UcjIBsS1CNY" title="Heritage Mosque Special Report" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UcjIBsS1CNY" title="ঐতিহাসিক মসজিদ বিশেষ রিপোর্ট" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
-                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Documentary / Special</span>
+                                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">News / Documentary</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Heritage Mosque Special Feature Report</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Cultural documentary report featuring cinematic framing and balanced voiceover mix.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">ঐতিহাসিক নান্দনিক মসজিদের বিশেষ ভিডিও ডকুমেন্টারি</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">সংস্কৃতি ও ঐতিহ্যের ওপর নির্মিত সিনেম্যাটিক ফ্রেমের বিশেষ স্পেশাল ভিডিও।</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 6 -->
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- Video 6 (News) -->
+                <div class="portfolio-item news glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
                     <div>
                         <div class="aspect-video bg-black relative">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dld6QP6TDgc" title="Political Landscape 2024" allowfullscreen loading="lazy"></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dld6QP6TDgc" title="বাংলাদেশের রাজনৈতিক পরিস্থিতি" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="p-5 space-y-2">
                             <div class="flex justify-between items-center">
-                                <span class="text-[10px] font-bold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">Short-form Video</span>
+                                <span class="text-[10px] font-bold text-rose-400 bg-rose-500/10 border border-rose-500/20 px-2.5 py-0.5 rounded-md uppercase tracking-wider">News Editing</span>
                                 <span class="text-[11px] text-slate-400"><i class="fa-brands fa-youtube text-red-500"></i> YouTube</span>
                             </div>
-                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">Political Landscape of Bangladesh 2024</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Digital-first short news package designed specifically for social media engagement and high retention.</p>
+                            <h4 class="text-base font-bold text-white group-hover:text-accent-sky transition">বাংলাদেশের সাম্প্রতিক প্রেক্ষাপট ও রাজনৈতিক বিশ্লেষণ</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">সোশ্যাল মিডিয়ার অডিয়েন্স রিটেনশন বজায় রেখে সম্পাদনা করা ডিজিটাল নিউজ প্যাকেজ।</p>
                         </div>
                     </div>
                 </div>
@@ -599,7 +600,7 @@
             </div>
         </section>
 
-        <!-- EDUCATION & TRAINING (Dhaka College Section Updated with dhaka_college.jpg) -->
+        <!-- EDUCATION & TRAINING -->
         <section class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border">
             <div class="mb-12">
                 <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">QUALIFICATIONS</span>
@@ -621,7 +622,6 @@
                         </div>
                     </div>
 
-                    <!-- Dhaka College Image Container -->
                     <div class="rounded-xl overflow-hidden bg-dark-base border border-dark-border aspect-[16/10] group mt-2">
                         <img src="assets/dhaka_college.jpg" alt="Dhaka College Campus" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                     </div>
@@ -685,7 +685,7 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
+        <!-- CONTACT SECTION WITH PRESERVED DOWNLOAD CV BUTTON -->
         <section id="contact" class="py-20 px-6 max-w-7xl mx-auto border-t border-dark-border text-center">
             <div class="max-w-3xl mx-auto space-y-6">
                 <span class="text-accent-sky font-bold text-xs tracking-widest uppercase">GET IN TOUCH</span>
@@ -736,6 +736,28 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Portfolio Dynamic Filtering Script
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-accent-sky', 'text-slate-950', 'font-bold');
+                btn.classList.add('bg-dark-card', 'border', 'border-dark-border', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-dark-card', 'border', 'border-dark-border', 'text-slate-300');
+            event.target.classList.add('bg-accent-sky', 'text-slate-950', 'font-bold');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
